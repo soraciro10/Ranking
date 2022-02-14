@@ -14,6 +14,6 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = gun.transform.position+new Vector3(2,0,0);
+        transform.position = gun.transform.position+new Vector3(0,-1f,0);
     }
 }

@@ -64,7 +64,7 @@ public class GunMove : MonoBehaviour
         rotationY += Input.GetAxis("Mouse Y") * sensitivityY;//rotationYにYの移動量*sensitivityYの分だけ増やす
         rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);//rotationYを-60〜60の値にする
 
-        //CameraRot.transform.localEulerAngles = new Vector3(0, 0, 0);//オブジェクトの向きをnew Vector3(-rotationY, rotationX, 0)にする
+        CameraRot.transform.localEulerAngles = new Vector3(0, rotationX, 0);//オブジェクトの向きをnew Vector3(-rotationY, rotationX, 0)にする
         PlayerRot.transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);//オブジェクトの向きをnew Vector3(-rotationY, rotationX, 0)にする
 
         if (Input.GetKey(KeyCode.W))// もし、Wキーがおされたら、
